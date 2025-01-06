@@ -62,7 +62,11 @@
     "react-query": "latest",
     "ai": "latest",
     "@ai-sdk/openai": "latest",
-    "@vercel/toolbar": "latest"
+    "@vercel/toolbar": "latest",
+    "html-validate": "latest",
+    "globby": "latest",
+    "fs": "latest",
+    "path": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",

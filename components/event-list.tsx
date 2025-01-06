@@ -66,7 +66,7 @@ export const EventList: React.FC<EventListProps> = ({
           <CardTitle>Events</CardTitle>
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
-              <Button variant="outline" size="icon">
+              <Button type="button" variant="outline" size="icon">
                 <Plus className="h-4 w-4" />
               </Button>
             </DialogTrigger>
@@ -103,11 +103,7 @@ export const EventList: React.FC<EventListProps> = ({
                     </div>
                   </div>
                   {event.invited && event.invited.includes(selectedUser.id) && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => promoteToMember(event.id, selectedUser.id)}
-                    >
+                    <Button type="button" variant="outline" size="sm">
                       <UserPlus className="h-4 w-4 mr-1" />
                       Join
                     </Button>
@@ -115,15 +111,15 @@ export const EventList: React.FC<EventListProps> = ({
                 </div>
                 <div className="flex items-center justify-between mt-2">
                   <div className="flex space-x-4">
-                    <Button variant="ghost" size="sm" className="text-muted-foreground">
+                    <Button type="button" variant="ghost" size="sm" className="text-muted-foreground">
                       <Heart className="h-4 w-4 mr-1" />
                       {event.likes}
                     </Button>
-                    <Button variant="ghost" size="sm" className="text-muted-foreground">
+                    <Button type="button" variant="ghost" size="sm" className="text-muted-foreground">
                       <MessageCircle className="h-4 w-4 mr-1" />
                       {event.comments}
                     </Button>
-                    <Button variant="ghost" size="sm" className="text-muted-foreground">
+                    <Button type="button" variant="ghost" size="sm" className="text-muted-foreground">
                       <Repeat2 className="h-4 w-4 mr-1" />
                       {event.shares}
                     </Button>

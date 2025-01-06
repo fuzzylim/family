@@ -449,6 +449,8 @@ export function CalendarView() {
               <button 
                 onClick={() => setIsSidePanelOpen(true)}
                 className="text-muted-foreground hover:text-foreground mr-4"
+                aria-label="Toggle sidebar"
+                type="button"
               >
                 ☰
               </button>
@@ -472,7 +474,7 @@ export function CalendarView() {
               </div>
             </div>
           </header>
-          <main className="flex-1 overflow-auto p-4">
+          <main className="flex-1 overflow-auto p-4" role="main">
             {selectedUser && memoizedEventList}
             {invitedUsers.length > 0 && (
               <InvitedUserStatus 

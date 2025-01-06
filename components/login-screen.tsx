@@ -153,9 +153,11 @@ export function LoginScreen({
             {users.map((user) => (
               <Button
                 key={`user-${user.id}`}
+                type="button"
+                onClick={() => setSelectedUser(user)}
                 variant={selectedUser?.id === user.id ? "default" : "outline"}
                 className="w-full justify-start"
-                onClick={() => setSelectedUser(user)}
+                aria-label={`Login as ${user.name}`}
               >
                 <Avatar className="mr-2 h-6 w-6">
                   <AvatarImage src={user.image} alt={user.name} />
